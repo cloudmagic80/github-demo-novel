@@ -1,0 +1,358 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2639
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fmodern\fcharset0 Courier-Oblique;\f1\fmodern\fcharset0 Courier;}
+{\colortbl;\red255\green255\blue255;\red81\green136\blue67;\red32\green32\blue32;\red153\green168\blue186;
+\red191\green100\blue38;\red88\green118\blue71;}
+{\*\expandedcolortbl;;\csgenericrgb\c31765\c53333\c26275;\csgenericrgb\c12549\c12549\c12549;\csgenericrgb\c60000\c65882\c72941;
+\csgenericrgb\c74902\c39216\c14902;\csgenericrgb\c34510\c46275\c27843;}
+\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\i\fs26 \cf2 \cb3 # ./prime multiple-settings set --env staging --input ./settings/staging/0152-CA-Add-QualityFilter-Antigen.yml\
+
+\f1\i0 \cf4 ---\
+- \cf5 name\cf4 : \cf6 "ca-dph"\
+  \cf5 description\cf4 : \cf6 "California Department of Public Health"\
+  \cf5 jurisdiction\cf4 : \cf6 "STATE"\
+  \cf5 stateCode\cf4 : \cf6 "CA"\
+  \cf5 countyName\cf4 : null\
+  \cf5 filters\cf4 : null\
+  \cf5 featureFlags\cf4 : null\
+  \cf5 senders\cf4 : []\
+  \cf5 receivers\cf4 :\
+    - \cf5 name\cf4 : \cf6 "elr"\
+      \cf5 organizationName\cf4 : \cf6 "ca-dph"\
+      \cf5 topic\cf4 : \cf6 "covid-19"\
+      \cf5 customerStatus\cf4 : \cf6 "active"\
+      \cf5 translation\cf4 : !<HL7>\
+        \cf5 schemaName\cf4 : \cf6 "covid-19"\
+        \cf5 useTestProcessingMode\cf4 : false\
+        \cf5 useBatchHeaders\cf4 : true\
+        \cf5 receivingApplicationName\cf4 : null\
+        \cf5 receivingApplicationOID\cf4 : null\
+        \cf5 receivingFacilityName\cf4 : null\
+        \cf5 receivingFacilityOID\cf4 : null\
+        \cf5 messageProfileId\cf4 : null\
+        \cf5 replaceValue\cf4 :\
+          \cf5 OBX-17-2\cf4 : \cf6 "OBX-17-9"\
+          \cf5 OBX-23-1\cf4 : \cf6 "OBX-23-1,-,OBX-23-10"\
+        \cf5 replaceValueAwithB\cf4 :\
+          \cf5 MSH-6\cf4 :\
+            - \cf5 '*'\cf4 : \cf6 "CDPH_CID^2.16.840.1.114222.4.1.214104^ISO"\
+          \cf5 MSH-5\cf4 :\
+            - \cf5 '*'\cf4 : \cf6 "CDPH CA REDIE^2.16.840.1.114222.4.3.3.10.1.1^ISO"\
+          \cf5 MSH-3\cf4 :\
+            - \cf5 '*'\cf4 : \cf6 "CDC PRIME - Atlanta^2.16.840.1.114222.4.1.237821^ISO"\
+        \cf5 reportingFacilityName\cf4 : null\
+        \cf5 reportingFacilityId\cf4 : null\
+        \cf5 reportingFacilityIdType\cf4 : null\
+        \cf5 suppressQstForAoe\cf4 : false\
+        \cf5 suppressHl7Fields\cf4 : \cf6 "OBX-17-1, OBX-18-1, OBX-18-2, OBX-18-3, OBX-18-4"\
+        \cf5 suppressAoe\cf4 : true\
+        \cf5 defaultAoeToUnknown\cf4 : false\
+        \cf5 replaceUnicodeWithAscii\cf4 : false\
+        \cf5 useBlankInsteadOfUnknown\cf4 : null\
+        \cf5 truncateHDNamespaceIds\cf4 : true\
+        \cf5 truncateHl7Fields\cf4 : \cf6 "OBX-23-1, ORC-21-1, OBR-16-1, OBR-16-3, ORC-12-1, ORC-12-3,\\\
+        \\ PID-5-1, PID-5-2, PID-5-3"\
+        \cf5 usePid14ForPatientEmail\cf4 : false\
+        \cf5 convertTimestampToDateTime\cf4 : null\
+        \cf5 cliaForOutOfStateTesting\cf4 : \cf6 "CDPH000075"\
+        \cf5 cliaForSender\cf4 :\
+          \cf5 biovisiondx-il\cf4 : \cf6 "CDPH000087"\
+          \cf5 newport-childrens-hospital-ca\cf4 : \cf6 "CDPH000087"\
+          \cf5 covidclinic-org\cf4 : \cf6 "CDPH000087"\
+          \cf5 simple_report.default\cf4 : \cf6 "CDPH000085"\
+          \cf5 touroedu-ca\cf4 : \cf6 "CDPH000087"\
+          \cf5 toprankdx-ca\cf4 : \cf6 "CDPH000087"\
+          \cf5 uhg-mn\cf4 : \cf6 "CDPH000087"\
+          \cf5 vivature-tx\cf4 : \cf6 "CDPH000087"\
+          \cf5 simple_report\cf4 : \cf6 "CDPH000085"\
+          \cf5 sourcebioscience_ca\cf4 : \cf6 "CDPH000087"\
+          \cf5 pcl-ca\cf4 : \cf6 "CDPH000087"\
+          \cf5 jrslab-ca\cf4 : \cf6 "CDPH000087"\
+          \cf5 ImageMover\cf4 : \cf6 "CDPH000077"\
+          \cf5 stemexpress-ca\cf4 : \cf6 "CDPH000087"\
+          \cf5 sdilabs-ca\cf4 : \cf6 "CDPH000085"\
+          \cf5 quantgene-ca\cf4 : \cf6 "CDPH000087"\
+          \cf5 hollywoodsmiles-ca\cf4 : \cf6 "CDPH000087"\
+          \cf5 cadph-csvuploadertest\cf4 : \cf6 "CDPH000087"\
+          \cf5 corebiolabs-oh\cf4 : \cf6 "CDPH000087"\
+          \cf5 kern-county-phsd-ca\cf4 : \cf6 "CDPH000087"\
+          \cf5 covidchecktoday-co\cf4 : \cf6 "CDPH000087"\
+          \cf5 kwokmandx-ca\cf4 : \cf6 "CDPH000087"\
+          \cf5 desertoasishealthcare-ca\cf4 : \cf6 "CDPH000087"\
+          \cf5 all-in-one-health-ca\cf4 : \cf6 "CDPH000087"\
+          \cf5 naval-health-clinic-lemoore\cf4 : \cf6 "CDPH000087"\
+          \cf5 warrior-dx-co\cf4 : \cf6 "CDPH000087"\
+          \cf5 mycarelabs-ca\cf4 : \cf6 "CDPH000087"\
+        \cf5 phoneNumberFormatting\cf4 : \cf6 "STANDARD"\
+        \cf5 suppressNonNPI\cf4 : false\
+        \cf5 processingModeCode\cf4 : null\
+        \cf5 replaceDiiWithOid\cf4 : null\
+        \cf5 applyOTCDefault\cf4 : false\
+        \cf5 useOrderingFacilityName\cf4 : \cf6 "STANDARD"\
+        \cf5 valueSetOverrides\cf4 : \{\}\
+        \cf5 nameFormat\cf4 : \cf6 "STANDARD"\
+        \cf5 receivingOrganization\cf4 : null\
+        \cf5 convertPositiveDateTimeOffsetToNegative\cf4 : false\
+        \cf5 stripInvalidCharsRegex\cf4 : null\
+        \cf5 convertDateTimesToReceiverLocalTime\cf4 : false\
+        \cf5 useHighPrecisionHeaderDateTimeFormat\cf4 : false\
+        \cf5 type\cf4 : \cf6 "HL7"\
+        \cf5 jurisdictionalFilter\cf4 :\
+          - \cf6 "orEquals(ordering_facility_state, CA, patient_state, CA)"\
+        \cf5 qualityFilter\cf4 :\
+          - \cf6 "hasAtLeastOneOf(order_test_date,specimen_collection_date_time,test_result_date)"\
+          \cf4 - \cf6 "hasAtLeastOneOf(patient_street,patient_zip_code,patient_phone_number,patient_email)"\
+          \cf4 - \cf6 "hasValidDataFor(message_id,equipment_model_name,specimen_type,test_result,patient_last_name,patient_first_name,patient_dob,ordering_provider_id)"\
+          \cf4 - \cf6 "isValidCLIA(testing_lab_clia)"\
+          \cf4 - \cf6 "filterOutNegativeAntigenTestType(test_result, 260385009, 260415000, 895231008)"\
+         \cf5 routingFilter\cf4 :\
+           - \cf6 "allowNone()"\
+         \cf5 processingModeFilter\cf4 : []\
+        \cf5 reverseTheQualityFilter\cf4 : false\
+        \cf5 conditionFilter\cf4 : []\
+        \cf5 deidentify\cf4 : false\
+        \cf5 deidentifiedValue\cf4 : \cf6 ""\
+        \cf5 timing\cf4 :\
+           \cf5 operation\cf4 : \cf6 "MERGE"\
+           \cf5 numberPerDay\cf4 : 4\
+           \cf5 initialTime\cf4 : \cf6 "09:30"\
+           \cf5 timeZone\cf4 : \cf6 "EASTERN"\
+           \cf5 maxReportCount\cf4 : 100\
+           \cf5 whenEmpty\cf4 :\
+            \cf5 action\cf4 : \cf6 "NONE"\
+            \cf5 onlyOncePerDay\cf4 : false\
+        \cf5 description\cf4 : \cf6 "ELR Primary"\
+        \cf5 transport\cf4 : !<SFTP>\
+           \cf5 host\cf4 : \cf6 "ecgpe.healthtechnologygroup.com"\
+           \cf5 port\cf4 : \cf6 "22"\
+           \cf5 filePath\cf4 : \cf6 "./in/SimpleProd/HL7"\
+           \cf5 credentialName\cf4 : null\
+           \cf5 type\cf4 : \cf6 "SFTP"\
+        \cf5 externalName\cf4 : \cf6 "Primary Feed"\
+        \cf5 timeZone\cf4 : null\
+        \cf5 dateTimeFormat\cf4 : \cf6 "OFFSET"\
+    \cf4 - \cf5 name\cf4 : \cf6 "elr-saphire"\
+      \cf5 organizationName\cf4 : \cf6 "ca-dph"\
+      \cf5 topic\cf4 : \cf6 "covid-19"\
+      \cf5 customerStatus\cf4 : \cf6 "active"\
+      \cf5 translation\cf4 : !<HL7>\
+        \cf5 schemaName\cf4 : \cf6 "covid-19"\
+        \cf5 useTestProcessingMode\cf4 : false\
+        \cf5 useBatchHeaders\cf4 : true\
+        \cf5 receivingApplicationName\cf4 : null\
+        \cf5 receivingApplicationOID\cf4 : null\
+        \cf5 receivingFacilityName\cf4 : null\
+        \cf5 receivingFacilityOID\cf4 : null\
+        \cf5 messageProfileId\cf4 : null\
+        \cf5 replaceValue\cf4 :\
+          \cf5 OBX-17-2\cf4 : \cf6 "OBX-17-9"\
+          \cf5 OBX-23-1\cf4 : \cf6 "OBX-23-1,-,OBX-23-10"\
+        \cf5 replaceValueAwithB\cf4 :\
+          \cf5 MSH-6\cf4 :\
+            - \cf5 '*'\cf4 : \cf6 "CDPH_CID^2.16.840.1.114222.4.1.214104^ISO"\
+          \cf5 MSH-5\cf4 :\
+            - \cf5 '*'\cf4 : \cf6 "CDPH CA REDIE^2.16.840.1.114222.4.3.3.10.1.1^ISO"\
+          \cf5 MSH-3\cf4 :\
+            - \cf5 '*'\cf4 : \cf6 "CDC PRIME - Atlanta^2.16.840.1.114222.4.1.237821^ISO"\
+        \cf5 reportingFacilityName\cf4 : null\
+        \cf5 reportingFacilityId\cf4 : null\
+        \cf5 reportingFacilityIdType\cf4 : null\
+        \cf5 suppressQstForAoe\cf4 : false\
+        \cf5 suppressHl7Fields\cf4 : \cf6 "OBX-17-1, OBX-18-1, OBX-18-2, OBX-18-3, OBX-18-4"\
+        \cf5 suppressAoe\cf4 : true\
+        \cf5 defaultAoeToUnknown\cf4 : false\
+        \cf5 replaceUnicodeWithAscii\cf4 : false\
+        \cf5 useBlankInsteadOfUnknown\cf4 : null\
+        \cf5 truncateHDNamespaceIds\cf4 : true\
+        \cf5 truncateHl7Fields\cf4 : \cf6 "OBX-23-1, ORC-21-1, OBR-16-1, OBR-16-3, ORC-12-1, ORC-12-3,\\\
+        \\ PID-5-1, PID-5-2, PID-5-3"\
+        \cf5 usePid14ForPatientEmail\cf4 : false\
+        \cf5 convertTimestampToDateTime\cf4 : null\
+        \cf5 cliaForOutOfStateTesting\cf4 : \cf6 "CDPH000075"\
+        \cf5 cliaForSender\cf4 :\
+          \cf5 biovisiondx-il\cf4 : \cf6 "CDPH000087"\
+          \cf5 newport-childrens-hospital-ca\cf4 : \cf6 "CDPH000087"\
+          \cf5 covidclinic-org\cf4 : \cf6 "CDPH000087"\
+          \cf5 simple_report.default\cf4 : \cf6 "CDPH000085"\
+          \cf5 touroedu-ca\cf4 : \cf6 "CDPH000087"\
+          \cf5 toprankdx-ca\cf4 : \cf6 "CDPH000087"\
+          \cf5 uhg-mn\cf4 : \cf6 "CDPH000087"\
+          \cf5 vivature-tx\cf4 : \cf6 "CDPH000087"\
+          \cf5 simple_report\cf4 : \cf6 "CDPH000085"\
+          \cf5 sourcebioscience_ca\cf4 : \cf6 "CDPH000087"\
+          \cf5 pcl-ca\cf4 : \cf6 "CDPH000087"\
+          \cf5 jrslab-ca\cf4 : \cf6 "CDPH000087"\
+          \cf5 ImageMover\cf4 : \cf6 "CDPH000077"\
+          \cf5 stemexpress-ca\cf4 : \cf6 "CDPH000087"\
+          \cf5 bzdlabs\cf4 : \cf6 "CDPH000085"\
+          \cf5 sdilabs-ca\cf4 : \cf6 "CDPH000087"\
+          \cf5 quantgene-ca\cf4 : \cf6 "CDPH000087"\
+          \cf5 hollywoodsmiles-ca\cf4 : \cf6 "CDPH000087"\
+          \cf5 cadph-csvuploadertest\cf4 : \cf6 "CDPH000087"\
+          \cf5 corebiolabs-oh\cf4 : \cf6 "CDPH000087"\
+          \cf5 kern-county-phsd-ca\cf4 : \cf6 "CDPH000087"\
+          \cf5 covidchecktoday-co\cf4 : \cf6 "CDPH000087"\
+          \cf5 kwokmandx-ca\cf4 : \cf6 "CDPH000087"\
+          \cf5 desertoasishealthcare-ca\cf4 : \cf6 "CDPH000087"\
+          \cf5 all-in-one-health-ca\cf4 : \cf6 "CDPH000087"\
+          \cf5 naval-health-clinic-lemoore\cf4 : \cf6 "CDPH000087"\
+          \cf5 warrior-dx-co\cf4 : \cf6 "CDPH000087"\
+          \cf5 mycarelabs-ca\cf4 : \cf6 "CDPH000087"\
+        \cf5 phoneNumberFormatting\cf4 : \cf6 "STANDARD"\
+        \cf5 suppressNonNPI\cf4 : false\
+        \cf5 processingModeCode\cf4 : null\
+        \cf5 replaceDiiWithOid\cf4 : null\
+        \cf5 applyOTCDefault\cf4 : false\
+        \cf5 useOrderingFacilityName\cf4 : \cf6 "STANDARD"\
+        \cf5 valueSetOverrides\cf4 : \{\}\
+        \cf5 nameFormat\cf4 : \cf6 "STANDARD"\
+        \cf5 receivingOrganization\cf4 : null\
+        \cf5 convertPositiveDateTimeOffsetToNegative\cf4 : false\
+        \cf5 stripInvalidCharsRegex\cf4 : null\
+        \cf5 convertDateTimesToReceiverLocalTime\cf4 : true\
+        \cf5 useHighPrecisionHeaderDateTimeFormat\cf4 : false\
+        \cf5 type\cf4 : \cf6 "HL7"\
+      \cf5 jurisdictionalFilter\cf4 :\
+        - \cf6 "orEquals(ordering_facility_state, CA, patient_state, CA)"\
+      \cf5 qualityFilter\cf4 :\
+        - \cf6 "hasAtLeastOneOf(order_test_date,specimen_collection_date_time,test_result_date)"\
+        \cf4 - \cf6 "hasAtLeastOneOf(patient_street,patient_zip_code,patient_phone_number,patient_email)"\
+        \cf4 - \cf6 "hasValidDataFor(message_id,equipment_model_name,specimen_type,test_result,patient_last_name,patient_first_name,patient_dob,ordering_provider_id)"\
+        \cf4 - \cf6 "isValidCLIA(testing_lab_clia)"\
+        \cf4 - \cf6 "filterOutNegativeAntigenTestType(test_result, 260385009, 260415000, 895231008)"\
+      \cf5 routingFilter\cf4 :\
+        - \cf6 "DoesNotMatch(sender_id, pmg)"\
+      \cf5 processingModeFilter\cf4 : []\
+      \cf5 reverseTheQualityFilter\cf4 : false\
+      \cf5 conditionFilter\cf4 : []\
+      \cf5 deidentify\cf4 : false\
+      \cf5 deidentifiedValue\cf4 : \cf6 ""\
+      \cf5 timing\cf4 :\
+        \cf5 operation\cf4 : \cf6 "MERGE"\
+        \cf5 numberPerDay\cf4 : 4\
+        \cf5 initialTime\cf4 : \cf6 "09:30"\
+        \cf5 timeZone\cf4 : \cf6 "EASTERN"\
+        \cf5 maxReportCount\cf4 : 100\
+        \cf5 whenEmpty\cf4 :\
+          \cf5 action\cf4 : \cf6 "NONE"\
+          \cf5 onlyOncePerDay\cf4 : false\
+      \cf5 description\cf4 : \cf6 ""\
+      \cf5 transport\cf4 : null\
+      \cf5 externalName\cf4 : null\
+      \cf5 timeZone\cf4 : \cf6 "PACIFIC"\
+      \cf5 dateTimeFormat\cf4 : \cf6 "LOCAL"\
+    \cf4 - \cf5 name\cf4 : \cf6 "elr-saphirestage"\
+      \cf5 organizationName\cf4 : \cf6 "ca-dph"\
+      \cf5 topic\cf4 : \cf6 "covid-19"\
+      \cf5 customerStatus\cf4 : \cf6 "active"\
+      \cf5 translation\cf4 : !<HL7>\
+        \cf5 schemaName\cf4 : \cf6 "covid-19"\
+        \cf5 useTestProcessingMode\cf4 : false\
+        \cf5 useBatchHeaders\cf4 : true\
+        \cf5 receivingApplicationName\cf4 : null\
+        \cf5 receivingApplicationOID\cf4 : null\
+        \cf5 receivingFacilityName\cf4 : null\
+        \cf5 receivingFacilityOID\cf4 : null\
+        \cf5 messageProfileId\cf4 : null\
+        \cf5 replaceValue\cf4 :\
+          \cf5 OBX-17-2\cf4 : \cf6 "OBX-17-9"\
+          \cf5 OBX-23-1\cf4 : \cf6 "OBX-23-1,-,OBX-23-10"\
+        \cf5 replaceValueAwithB\cf4 :\
+          \cf5 MSH-6\cf4 :\
+            - \cf5 '*'\cf4 : \cf6 "CDPH_CID^2.16.840.1.114222.4.1.214104^ISO"\
+          \cf5 MSH-5\cf4 :\
+            - \cf5 '*'\cf4 : \cf6 "CDPH CA REDIE^2.16.840.1.114222.4.3.3.10.1.1^ISO"\
+          \cf5 MSH-3\cf4 :\
+            - \cf5 '*'\cf4 : \cf6 "CDC PRIME - Atlanta^2.16.840.1.114222.4.1.237821^ISO"\
+        \cf5 reportingFacilityName\cf4 : null\
+        \cf5 reportingFacilityId\cf4 : null\
+        \cf5 reportingFacilityIdType\cf4 : null\
+        \cf5 suppressQstForAoe\cf4 : false\
+        \cf5 suppressHl7Fields\cf4 : \cf6 "OBX-17-1, OBX-18-1, OBX-18-2, OBX-18-3, OBX-18-4"\
+        \cf5 suppressAoe\cf4 : true\
+        \cf5 defaultAoeToUnknown\cf4 : false\
+        \cf5 replaceUnicodeWithAscii\cf4 : false\
+        \cf5 useBlankInsteadOfUnknown\cf4 : null\
+        \cf5 truncateHDNamespaceIds\cf4 : true\
+        \cf5 truncateHl7Fields\cf4 : \cf6 "OBX-23-1, ORC-21-1, OBR-16-1, OBR-16-3, ORC-12-1, ORC-12-3,\\\
+        \\ PID-5-1, PID-5-2, PID-5-3"\
+        \cf5 usePid14ForPatientEmail\cf4 : false\
+        \cf5 convertTimestampToDateTime\cf4 : null\
+        \cf5 cliaForOutOfStateTesting\cf4 : \cf6 "CDPH000075"\
+        \cf5 cliaForSender\cf4 :\
+          \cf5 biovisiondx-il\cf4 : \cf6 "CDPH000087"\
+          \cf5 newport-childrens-hospital-ca\cf4 : \cf6 "CDPH000087"\
+          \cf5 covidclinic-org\cf4 : \cf6 "CDPH000087"\
+          \cf5 simple_report.default\cf4 : \cf6 "CDPH000085"\
+          \cf5 touroedu-ca\cf4 : \cf6 "CDPH000087"\
+          \cf5 toprankdx-ca\cf4 : \cf6 "CDPH000087"\
+          \cf5 uhg-mn\cf4 : \cf6 "CDPH000087"\
+          \cf5 vivature-tx\cf4 : \cf6 "CDPH000087"\
+          \cf5 simple_report\cf4 : \cf6 "CDPH000085"\
+          \cf5 sourcebioscience_ca\cf4 : \cf6 "CDPH000087"\
+          \cf5 pcl-ca\cf4 : \cf6 "CDPH000087"\
+          \cf5 jrslab-ca\cf4 : \cf6 "CDPH000087"\
+          \cf5 ImageMover\cf4 : \cf6 "CDPH000077"\
+          \cf5 stemexpress-ca\cf4 : \cf6 "CDPH000087"\
+          \cf5 bzdlabs\cf4 : \cf6 "CDPH000085"\
+          \cf5 sdilabs-ca\cf4 : \cf6 "CDPH000087"\
+          \cf5 quantgene-ca\cf4 : \cf6 "CDPH000087"\
+          \cf5 hollywoodsmiles-ca\cf4 : \cf6 "CDPH000087"\
+          \cf5 cadph-csvuploadertest\cf4 : \cf6 "CDPH000087"\
+          \cf5 corebiolabs-oh\cf4 : \cf6 "CDPH000087"\
+          \cf5 kern-county-phsd-ca\cf4 : \cf6 "CDPH000087"\
+          \cf5 covidchecktoday-co\cf4 : \cf6 "CDPH000087"\
+          \cf5 kwokmandx-ca\cf4 : \cf6 "CDPH000087"\
+          \cf5 desertoasishealthcare-ca\cf4 : \cf6 "CDPH000087"\
+          \cf5 all-in-one-health-ca\cf4 : \cf6 "CDPH000087"\
+          \cf5 naval-health-clinic-lemoore\cf4 : \cf6 "CDPH000087"\
+          \cf5 warrior-dx-co\cf4 : \cf6 "CDPH000087"\
+          \cf5 mycarelabs-ca\cf4 : \cf6 "CDPH000087"\
+        \cf5 phoneNumberFormatting\cf4 : \cf6 "STANDARD"\
+        \cf5 suppressNonNPI\cf4 : false\
+        \cf5 processingModeCode\cf4 : null\
+        \cf5 replaceDiiWithOid\cf4 : null\
+        \cf5 applyOTCDefault\cf4 : false\
+        \cf5 useOrderingFacilityName\cf4 : \cf6 "STANDARD"\
+        \cf5 valueSetOverrides\cf4 : \{\}\
+        \cf5 nameFormat\cf4 : \cf6 "STANDARD"\
+        \cf5 receivingOrganization\cf4 : null\
+        \cf5 convertPositiveDateTimeOffsetToNegative\cf4 : false\
+        \cf5 stripInvalidCharsRegex\cf4 : null\
+        \cf5 convertDateTimesToReceiverLocalTime\cf4 : true\
+        \cf5 useHighPrecisionHeaderDateTimeFormat\cf4 : false\
+        \cf5 type\cf4 : \cf6 "HL7"\
+      \cf5 jurisdictionalFilter\cf4 :\
+        - \cf6 "orEquals(ordering_facility_state, CA, patient_state, CA)"\
+      \cf5 qualityFilter\cf4 :\
+        - \cf6 "hasAtLeastOneOf(order_test_date,specimen_collection_date_time,test_result_date)"\
+        \cf4 - \cf6 "hasAtLeastOneOf(patient_street,patient_zip_code,patient_phone_number,patient_email)"\
+        \cf4 - \cf6 "hasValidDataFor(message_id,equipment_model_name,specimen_type,test_result,patient_last_name,patient_first_name,patient_dob,ordering_provider_id)"\
+        \cf4 - \cf6 "isValidCLIA(testing_lab_clia)"\
+        \cf4 - \cf6 "filterOutNegativeAntigenTestType(test_result, 260385009, 260415000, 895231008)"\
+      \cf5 routingFilter\cf4 :\
+        - \cf6 "DoesNotMatch(sender_id, pmg)"\
+      \cf5 processingModeFilter\cf4 :\
+        - \cf6 "matches(processing_mode_code,T,D)"\
+      \cf5 reverseTheQualityFilter\cf4 : false\
+      \cf5 conditionFilter\cf4 : []\
+      \cf5 deidentify\cf4 : false\
+      \cf5 deidentifiedValue\cf4 : \cf6 ""\
+      \cf5 timing\cf4 :\
+        \cf5 operation\cf4 : \cf6 "MERGE"\
+        \cf5 numberPerDay\cf4 : 4\
+        \cf5 initialTime\cf4 : \cf6 "09:30"\
+        \cf5 timeZone\cf4 : \cf6 "EASTERN"\
+        \cf5 maxReportCount\cf4 : 100\
+        \cf5 whenEmpty\cf4 :\
+          \cf5 action\cf4 : \cf6 "NONE"\
+          \cf5 onlyOncePerDay\cf4 : false\
+      \cf5 description\cf4 : \cf6 ""\
+      \cf5 transport\cf4 : null\
+      \cf5 externalName\cf4 : null\
+      \cf5 timeZone\cf4 : \cf6 "PACIFIC"\
+      \cf5 dateTimeFormat\cf4 : \cf6 "LOCAL"\
+\
+}
